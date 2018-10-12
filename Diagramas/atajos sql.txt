@@ -1,0 +1,230 @@
+addcol
+/*
+*********************************************************************************
+AGREGAR COLUMNA A UNA TABLA EXISTENTE
+********************************************************************************
+*/
+IF NOT EXISTS
+(
+	SELECT 1
+	FROM sys.objects SO 
+	INNER JOIN sys.columns SC ON SO.OBJECT_ID = SC.OBJECT_ID
+	WHERE   SO.object_id = OBJECT_ID(N'#Schema.Table#') 
+	AND SC.NAME=(N'#Campo#')
+)
+BEGIN  
+	ALTER TABLE #Schema.Table#
+	ADD #NomCampo# int
+END 
+GO
+
+addfk
+/*
+==========================================================================
+AGREGAR CONSTRAINT FOREIGN KEY
+==========================================================================
+*/
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS 
+WHERE CONSTRAINT_NAME ='FK_HIJO_PADRE')
+BEGIN
+	ALTER TABLE <TablaHijo>
+	ADD CONSTRAINT FK_HIJO_PADRE
+	FOREIGN KEY (CampoHijo)
+	REFERENCES <TablaPadre>(CampoPadre)
+END
+GO
+
+addfun
+/*
+******************************************************************************************
+CREACION DE FUNCION
+******************************************************************************************
+*/
+DECLARE @NombreFuncion NVARCHAR(MAX)
+DECLARE @Action NVARCHAR(MAX)
+DECLARE @Query NVARCHAR(MAX)
+SET @Action = 'CREATE '
+SET @NombreFuncion = 'dbo.NombreFuncion'
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(@NombreFuncion) AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+	SET @Action = 'ALTER '
+END
+
+SET @Query = @Action + N'FUNCTION ' + @NombreFuncion + ' 
+(
+	@Parametro VARCHAR(2)
+)
+RETURNS DATETIME
+AS
+BEGIN
+	DECLARE @FechaResultado DATETIME
+	RETURN @FechaResultado
+END;
+' 
+BEGIN
+execute dbo.sp_executesql @statement = @Query
+END
+GO
+
+addproc
+/*
+******************************************************************************************
+NUEVO PROCEDIMIENTO ALMACENADO
+******************************************************************************************
+*/
+IF OBJECT_ID('Esquema.Nombre', 'P') IS NOT NULL
+	BEGIN
+		DROP PROCEDURE Esquema.Nombre
+	END
+GO
+
+CREATE PROCEDURE Esquema.Nombre
+(
+	@var VARCHAR(250)=NULL
+)
+AS
+BEGIN
+	
+END
+GO
+
+addproc2
+/*
+******************************************************************************************
+NUEVO PROCEDIMIENTO
+******************************************************************************************
+*/
+DECLARE @Action NVARCHAR(MAX)
+DECLARE @Query NVARCHAR(MAX)
+DECLARE @Name NVARCHAR(MAX)
+SET @Action = 'CREATE '
+SET @Name = 'Esquema.Nombre'
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND OBJECT_ID = OBJECT_ID(@Name))
+BEGIN
+	SET @Action = N'ALTER '
+END
+
+
+SET @Query = @Action + N'PROCEDURE ' + @Name +  ' 
+( 
+	@param tipodato
+)
+AS
+BEGIN
+	
+END;
+' 
+BEGIN
+execute dbo.sp_executesql @statement = @Query
+END
+GO
+
+
+addrel
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Ejemplo]') AND type in (N'U'))
+BEGIN
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EjemploDetalle]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS
+		(
+			--VERIFICA SI EXISTE EL CAMPO DE LA TABLA PADRE
+			SELECT 1 FROM sys.objects SO INNER JOIN sys.columns SC ON SO.OBJECT_ID = SC.OBJECT_ID
+			WHERE   SO.object_id = OBJECT_ID(N'dbo.Ejemplo') AND SC.NAME=(N'IdEjemplo')
+		)
+		BEGIN
+			IF EXISTS
+			(
+				----VERIFICA SI EXISTE EL CAMPO DE LA TABLA HIJO
+				SELECT 1 FROM sys.objects SO INNER JOIN sys.columns SC ON SO.OBJECT_ID = SC.OBJECT_ID
+				WHERE   SO.object_id = OBJECT_ID(N'dbo.EjemploDetalle') AND SC.NAME=(N'IdEjemplo')
+			)
+			BEGIN
+				--VERIFICA SI EXISTE RELACION
+				IF EXISTS(SELECT padre.name as padre, adoptado.name as hijo, relacion.name as relacion
+				FROM sys.foreign_key_columns col
+				INNER JOIN sys.all_objects padre ON col.referenced_object_id = padre.object_id 
+				INNER JOIN sys.all_objects adoptado ON col.parent_object_id = adoptado.object_id
+				INNER JOIN sys.all_objects relacion ON col.constraint_object_id = relacion.object_id
+				WHERE padre.name = 'Ejemplo' and adoptado.name = 'EjemploDetalle')
+				BEGIN
+					PRINT 'EXISTE'
+				END
+
+			END
+		END
+	END
+END
+GO
+
+addtype
+/*
+******************************************************************************************
+CREACION DE TIPO DE DATO
+******************************************************************************************
+*/
+IF NOT EXISTS (SELECT * FROM sys.types st JOIN sys.schemas ss ON st.schema_id = ss.schema_id 
+WHERE st.name = N'Nombre' AND ss.name = N'Esquema')
+BEGIN
+	CREATE TYPE Esquema.Nombre AS TABLE(
+	campo type
+	)
+END
+GO
+
+bus
+SELECT *
+FROM sys.procedures
+WHERE OBJECT_DEFINITION(OBJECT_ID) LIKE '%ClaveAjustarDocumento%' and OBJECT_DEFINITION(OBJECT_ID) LIKE '%update%'
+
+lastf
+/*
+LISTAR LAS ULTIMAS FUNCIONES
+*/
+SELECT	sc.name as Esquema,
+	pro.name as StoreProcedure, 
+	pro.create_date, 
+	pro.modify_date
+FROM sys.all_objects pro
+INNER JOIN sys.schemas sc ON pro.schema_id = sc.schema_id
+WHERE type = 'fn'
+ORDER BY modify_date DESC
+GO
+
+lasto
+/*Lista de objetos modificados*/
+SELECT top 200 o.NAME AS NombreObjeto
+	,s.NAME Esquema
+	,o.type_desc DescripcionTipo
+	,o.create_date FechaCreacion
+	,o.modify_date FechaModificacion
+FROM sys.all_objects o
+LEFT OUTER JOIN sys.schemas s ON o.schema_id = s.schema_id
+WHERE o.type_desc <> 'SQL_STORED_PROCEDURE'
+AND o.type_desc = 'USER_TABLE'
+ORDER BY o.modify_date DESC
+
+lastp
+/*
+LISTAR LOS ULTIMOS PROCEDIMIENTOS MODIFICADOS
+*/
+SELECT	sc.name + '.' + pro.name as StoreProcedure, 
+		pro.create_date, 
+		pro.modify_date
+FROM sys.all_objects pro
+INNER JOIN sys.schemas sc ON pro.schema_id = sc.schema_id
+WHERE type = 'P'
+ORDER BY modify_date DESC
+GO
+
+lasttype
+/*
+LISTAR LOS TIPOS DEFINIDOS
+*/
+SELECT	sc.name + '.' + typ.name Tipo,
+		typ.user_type_id
+FROM sys.types typ
+INNER JOIN sys.schemas sc ON typ.schema_id = sc.schema_id
+WHERE typ.is_user_defined = 1
+ORDER BY typ.name
+GO
+
