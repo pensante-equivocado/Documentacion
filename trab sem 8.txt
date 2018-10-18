@@ -1,0 +1,1018 @@
+#include "miniwin.h"
+
+using namespace miniwin;
+
+int main() {
+
+	vredimensiona(380,400);
+
+	/*Color blanco por defecto en cada linea, este se debe cambiar
+	para dar color personalizado a las formas.*/
+
+	/*
+	* FILA 1
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,0,20,20);
+	rectangulo_lleno(20,0,40,20);
+	rectangulo_lleno(40,0,60,20);
+	rectangulo_lleno(60,0,80,20);
+	rectangulo_lleno(80,0,100,20);
+	rectangulo_lleno(100,0,120,20);
+	rectangulo_lleno(120,0,140,20);
+	rectangulo_lleno(140,0,160,20);
+	rectangulo_lleno(160,0,180,20);
+	rectangulo_lleno(180,0,200,20);
+	rectangulo_lleno(200,0,220,20);
+	rectangulo_lleno(220,0,240,20);
+	rectangulo_lleno(240,0,260,20);
+	rectangulo_lleno(260,0,280,20);
+	rectangulo_lleno(280,0,300,20);
+	rectangulo_lleno(300,0,320,20);
+	rectangulo_lleno(320,0,340,20);
+	rectangulo_lleno(340,0,360,20);
+	rectangulo_lleno(360,0,380,20);
+
+	/*
+	* FILA 2
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,20,20,40);
+	rectangulo_lleno(20,20,40,40);
+	rectangulo_lleno(40,20,60,40);
+	rectangulo_lleno(60,20,80,40);
+	rectangulo_lleno(80,20,100,40);
+	rectangulo_lleno(100,20,120,40);
+	rectangulo_lleno(120,20,140,40);
+	rectangulo_lleno(140,20,160,40);
+	rectangulo_lleno(160,20,180,40);
+	rectangulo_lleno(180,20,200,40);
+	rectangulo_lleno(200,20,220,40);
+	rectangulo_lleno(220,20,240,40);
+	rectangulo_lleno(240,20,260,40);
+	rectangulo_lleno(260,20,280,40);
+	rectangulo_lleno(280,20,300,40);
+	rectangulo_lleno(300,20,320,40);
+	rectangulo_lleno(320,20,340,40);
+	rectangulo_lleno(340,20,360,40);
+	rectangulo_lleno(360,20,380,40);
+
+	/*
+	* FILA 3
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,40,20,60);
+	rectangulo_lleno(20,40,40,60);
+	rectangulo_lleno(40,40,60,60);
+	rectangulo_lleno(60,40,80,60);
+	rectangulo_lleno(80,40,100,60);
+	rectangulo_lleno(100,40,120,60);
+	rectangulo_lleno(120,40,140,60);
+	rectangulo_lleno(140,40,160,60);
+	rectangulo_lleno(160,40,180,60);
+	
+	color_rgb(255, 255, 255);
+    rectangulo_lleno(180,40,200,60);
+    
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(200,40,220,60);
+	rectangulo_lleno(220,40,240,60);
+	rectangulo_lleno(240,40,260,60);
+	rectangulo_lleno(260,40,280,60);
+	rectangulo_lleno(280,40,300,60);
+	rectangulo_lleno(300,40,320,60);
+	rectangulo_lleno(320,40,340,60);
+	rectangulo_lleno(340,40,360,60);
+	rectangulo_lleno(360,40,380,60);
+
+	/*
+	* FILA 4
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,60,20,80);
+	rectangulo_lleno(20,60,40,80);
+	rectangulo_lleno(40,60,60,80);
+	rectangulo_lleno(60,60,80,80);
+	rectangulo_lleno(80,60,100,80);
+	rectangulo_lleno(100,60,120,80);
+	rectangulo_lleno(120,60,140,80);
+	rectangulo_lleno(140,60,160,80);
+	rectangulo_lleno(160,60,180,80);
+	
+    color_rgb(255, 255, 255);
+    rectangulo_lleno(180,60,200,80);
+    
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(200,60,220,80);
+	rectangulo_lleno(220,60,240,80);
+	rectangulo_lleno(240,60,260,80);
+	rectangulo_lleno(260,60,280,80);
+	rectangulo_lleno(280,60,300,80);
+	rectangulo_lleno(300,60,320,80);
+	rectangulo_lleno(320,60,340,80);
+	rectangulo_lleno(340,60,360,80);
+	rectangulo_lleno(360,60,380,80);
+
+	/*
+	* FILA 5
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,80,20,100);
+	rectangulo_lleno(20,80,40,100);
+	rectangulo_lleno(40,80,60,100);
+	rectangulo_lleno(60,80,80,100);
+	rectangulo_lleno(80,80,100,100);
+	rectangulo_lleno(100,80,120,100);
+	rectangulo_lleno(120,80,140,100);
+	rectangulo_lleno(140,80,160,100);
+	rectangulo_lleno(160,80,180,100);
+	
+    color_rgb(255, 255, 255);
+    rectangulo_lleno(180,80,200,100);
+    
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(200,80,220,100);
+	rectangulo_lleno(220,80,240,100);
+	rectangulo_lleno(240,80,260,100);
+	rectangulo_lleno(260,80,280,100);
+	rectangulo_lleno(280,80,300,100);
+	rectangulo_lleno(300,80,320,100);
+	rectangulo_lleno(320,80,340,100);
+	rectangulo_lleno(340,80,360,100);
+	rectangulo_lleno(360,80,380,100);
+
+	/*
+	* FILA 6
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,100,20,120);
+	rectangulo_lleno(20,100,40,120);
+	rectangulo_lleno(40,100,60,120);
+	rectangulo_lleno(60,100,80,120);
+	rectangulo_lleno(80,100,100,120);
+	rectangulo_lleno(100,100,120,120);
+	rectangulo_lleno(120,100,140,120);
+	rectangulo_lleno(140,100,160,120);
+	
+    color_rgb(255, 255, 255);
+    rectangulo_lleno(160,100,180,120);
+	rectangulo_lleno(180,100,200,120);
+	rectangulo_lleno(200,100,220,120);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(220,100,240,120);
+	rectangulo_lleno(240,100,260,120);
+	rectangulo_lleno(260,100,280,120);
+	rectangulo_lleno(280,100,300,120);
+	rectangulo_lleno(300,100,320,120);
+	rectangulo_lleno(320,100,340,120);
+	rectangulo_lleno(340,100,360,120);
+	rectangulo_lleno(360,100,380,120);
+
+	/*
+	* FILA 7
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,120,20,140);
+	rectangulo_lleno(20,120,40,140);
+	rectangulo_lleno(40,120,60,140);
+	rectangulo_lleno(60,120,80,140);
+	rectangulo_lleno(80,120,100,140);
+	rectangulo_lleno(100,120,120,140);
+	rectangulo_lleno(120,120,140,140);
+	rectangulo_lleno(140,120,160,140);
+	
+    color_rgb(255, 255, 255);
+    rectangulo_lleno(160,120,180,140);
+	rectangulo_lleno(180,120,200,140);
+	rectangulo_lleno(200,120,220,140);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(220,120,240,140);
+	rectangulo_lleno(240,120,260,140);
+	rectangulo_lleno(260,120,280,140);
+	rectangulo_lleno(280,120,300,140);
+	rectangulo_lleno(300,120,320,140);
+	rectangulo_lleno(320,120,340,140);
+	rectangulo_lleno(340,120,360,140);
+	rectangulo_lleno(360,120,380,140);
+
+	/*
+	* FILA 8
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,140,20,160);
+	rectangulo_lleno(20,140,40,160);
+	rectangulo_lleno(40,140,60,160);
+	rectangulo_lleno(60,140,80,160);
+	rectangulo_lleno(80,140,100,160);
+	
+    color_rgb(255, 134, 134);
+    rectangulo_lleno(100,140,120,160);
+    
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(120,140,140,160);
+	rectangulo_lleno(140,140,160,160);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(160,140,180,160);
+	rectangulo_lleno(180,140,200,160);
+	rectangulo_lleno(200,140,220,160);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(220,140,240,160);
+	rectangulo_lleno(240,140,260,160);
+	
+	color_rgb(255, 134, 134);
+	rectangulo_lleno(260,140,280,160);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(280,140,300,160);
+	rectangulo_lleno(300,140,320,160);
+	rectangulo_lleno(320,140,340,160);
+	rectangulo_lleno(340,140,360,160);
+	rectangulo_lleno(360,140,380,160);
+
+	/*
+	* FILA 9
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,160,20,180);
+	rectangulo_lleno(20,160,40,180);
+	rectangulo_lleno(40,160,60,180);
+	rectangulo_lleno(60,160,80,180);
+	rectangulo_lleno(80,160,100,180);
+	
+    color_rgb(255, 134, 134);
+    rectangulo_lleno(100,160,120,180);
+    
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(120,160,140,180);
+	rectangulo_lleno(140,160,160,180);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(160,160,180,180);
+	rectangulo_lleno(180,160,200,180);
+	rectangulo_lleno(200,160,220,180);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(220,160,240,180);
+	rectangulo_lleno(240,160,260,180);
+	
+	color_rgb(255, 134, 134);
+	rectangulo_lleno(260,160,280,180);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(280,160,300,180);
+	rectangulo_lleno(300,160,320,180);
+	rectangulo_lleno(320,160,340,180);
+	rectangulo_lleno(340,160,360,180);
+	rectangulo_lleno(360,160,380,180);
+
+	/*
+	* FILA 10
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,180,20,200);
+	rectangulo_lleno(20,180,40,200);
+	rectangulo_lleno(40,180,60,200);
+	rectangulo_lleno(60,180,80,200);
+	rectangulo_lleno(80,180,100,200);
+	
+    color_rgb(255, 255, 255);
+    rectangulo_lleno(100,180,120,200);
+    
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(120,180,140,200);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(140,180,160,200);
+	rectangulo_lleno(160,180,180,200);
+	rectangulo_lleno(180,180,200,200);
+	rectangulo_lleno(200,180,220,200);
+	rectangulo_lleno(220,180,240,200);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(240,180,260,200);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(260,180,280,200);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(280,180,300,200);
+	rectangulo_lleno(300,180,320,200);
+	rectangulo_lleno(320,180,340,200);
+	rectangulo_lleno(340,180,360,200);
+	rectangulo_lleno(360,180,380,200);
+
+	/*
+	* FILA 11
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,200,20,220);
+	rectangulo_lleno(20,200,40,220);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(40,200,60,220);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(60,200,80,220);
+	rectangulo_lleno(80,200,100,220);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(100,200,120,220);
+	
+	color_rgb(34, 121, 255);//azul
+	rectangulo_lleno(120,200,140,220);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(140,200,160,220);
+	rectangulo_lleno(160,200,180,220);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(180,200,200,220);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(200,200,220,220);
+	rectangulo_lleno(220,200,240,220);
+	
+	color_rgb(34, 121, 255);//azul
+	rectangulo_lleno(240,200,260,220);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(260,200,280,220);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(280,200,300,220);
+	rectangulo_lleno(300,200,320,220);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(320,200,340,220);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,200,360,220);
+	rectangulo_lleno(360,200,380,220);
+
+	/*
+	* FILA 12
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,220,20,240);
+	rectangulo_lleno(20,220,40,240);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(40,220,60,240);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(60,220,80,240);
+	rectangulo_lleno(80,220,100,240);
+	
+	color_rgb(34, 121, 255);//azul
+	rectangulo_lleno(100,220,120,240);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(120,220,140,240);
+	rectangulo_lleno(140,220,160,240);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(160,220,180,240);
+	rectangulo_lleno(180,220,200,240);
+	rectangulo_lleno(200,220,220,240);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(220,220,240,240);
+	rectangulo_lleno(240,220,260,240);
+	
+	color_rgb(34, 121, 255);//azul
+	rectangulo_lleno(260,220,280,240);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(280,220,300,240);
+	rectangulo_lleno(300,220,320,240);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(320,220,340,240);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,220,360,240);
+	rectangulo_lleno(360,220,380,240);
+
+	/*
+	* FILA 13
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,240,20,260);
+	rectangulo_lleno(20,240,40,260);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(40,240,60,260);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(60,240,80,260);
+	rectangulo_lleno(80,240,100,260);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(100,240,120,260);
+	rectangulo_lleno(120,240,140,260);
+	rectangulo_lleno(140,240,160,260);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(160,240,180,260);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(180,240,200,260);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(200,240,220,260);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(220,240,240,260);
+	rectangulo_lleno(240,240,260,260);
+	rectangulo_lleno(260,240,280,260);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(280,240,300,260);
+	rectangulo_lleno(300,240,320,260);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(320,240,340,260);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,240,360,260);
+	rectangulo_lleno(360,240,380,260);
+
+	/*
+	* FILA 14
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,260,20,280);
+	rectangulo_lleno(20,260,40,280);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(40,260,60,280);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(60,260,80,280);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(80,260,100,280);
+	rectangulo_lleno(100,260,120,280);
+	rectangulo_lleno(120,260,140,280);
+	rectangulo_lleno(140,260,160,280);
+	rectangulo_lleno(160,260,180,280);
+	rectangulo_lleno(180,260,200,280);
+	rectangulo_lleno(200,260,220,280);
+	rectangulo_lleno(220,260,240,280);
+	rectangulo_lleno(240,260,260,280);
+	rectangulo_lleno(260,260,280,280);
+	rectangulo_lleno(280,260,300,280);
+
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(300,260,320,280);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(320,260,340,280);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,260,360,280);
+	rectangulo_lleno(360,260,380,280);
+
+	/*
+	* FILA 15
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,280,20,300);
+	rectangulo_lleno(20,280,40,300);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(40,280,60,300);
+	rectangulo_lleno(60,280,80,300);
+	rectangulo_lleno(80,280,100,300);
+	rectangulo_lleno(100,280,120,300);
+	rectangulo_lleno(120,280,140,300);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(140,280,160,300);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(160,280,180,300);
+	rectangulo_lleno(180,280,200,300);
+	rectangulo_lleno(200,280,220,300);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(220,280,240,300);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(240,280,260,300);
+	rectangulo_lleno(260,280,280,300);
+	rectangulo_lleno(280,280,300,300);
+	rectangulo_lleno(300,280,320,300);
+	rectangulo_lleno(320,280,340,300);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,280,360,300);
+	rectangulo_lleno(360,280,380,300);
+
+	/*
+	* FILA 16
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,300,20,320);
+	rectangulo_lleno(20,300,40,320);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(40,300,60,320);
+	rectangulo_lleno(60,300,80,320);
+	rectangulo_lleno(80,300,100,320);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(100,300,120,320);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(120,300,140,320);
+	rectangulo_lleno(140,300,160,320);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(160,300,180,320);
+	rectangulo_lleno(180,300,200,320);
+	rectangulo_lleno(200,300,220,320);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(220,300,240,320);
+	rectangulo_lleno(240,300,260,320);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(260,300,280,320);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(280,300,300,320);
+	rectangulo_lleno(300,300,320,320);
+	rectangulo_lleno(320,300,340,320);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,300,360,320);
+	rectangulo_lleno(360,300,380,320);
+
+	/*
+	* FILA 17
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,320,20,340);
+	rectangulo_lleno(20,320,40,340);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(40,320,60,340);
+	rectangulo_lleno(60,320,80,340);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(80,320,100,340);
+	rectangulo_lleno(100,320,120,340);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(120,320,140,340);
+	rectangulo_lleno(140,320,160,340);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(160,320,180,340);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(180,320,200,340);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(200,320,220,340);
+	
+	color_rgb(255, 134, 134);//rojo
+	rectangulo_lleno(220,320,240,340);
+	rectangulo_lleno(240,320,260,340);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(260,320,280,340);
+	rectangulo_lleno(280,320,300,340);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(300,320,320,340);
+	rectangulo_lleno(320,320,340,340);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,320,360,340);
+	rectangulo_lleno(360,320,380,340);
+
+	/*
+	* FILA 18
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,340,20,360);
+	rectangulo_lleno(20,340,40,360);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(40,340,60,360);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(60,340,80,360);
+	rectangulo_lleno(80,340,100,360);
+	rectangulo_lleno(100,340,120,360);
+	rectangulo_lleno(120,340,140,360);
+	rectangulo_lleno(140,340,160,360);
+	rectangulo_lleno(160,340,180,360);
+	
+    color_rgb(255, 255, 255);
+    rectangulo_lleno(180,340,200,360);
+    
+    color_rgb(0, 0, 0);
+	rectangulo_lleno(200,340,220,360);
+	rectangulo_lleno(220,340,240,360);
+	rectangulo_lleno(240,340,260,360);
+	rectangulo_lleno(260,340,280,360);
+	rectangulo_lleno(280,340,300,360);
+	rectangulo_lleno(300,340,320,360);
+	
+	color_rgb(255, 255, 255);
+	rectangulo_lleno(320,340,340,360);
+	
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(340,340,360,360);
+	rectangulo_lleno(360,340,380,360);
+
+	/*
+	* FILA 19
+	*/
+	color_rgb(0, 0, 0);
+	rectangulo_lleno(0,360,20,380);
+	rectangulo_lleno(20,360,40,380);
+	rectangulo_lleno(40,360,60,380);
+	rectangulo_lleno(60,360,80,380);
+	rectangulo_lleno(80,360,100,380);
+	rectangulo_lleno(100,360,120,380);
+	rectangulo_lleno(120,360,140,380);
+	rectangulo_lleno(140,360,160,380);
+	rectangulo_lleno(160,360,180,380);
+	rectangulo_lleno(180,360,200,380);
+	rectangulo_lleno(200,360,220,380);
+	rectangulo_lleno(220,360,240,380);
+	rectangulo_lleno(240,360,260,380);
+	rectangulo_lleno(260,360,280,380);
+	rectangulo_lleno(280,360,300,380);
+	rectangulo_lleno(300,360,320,380);
+	rectangulo_lleno(320,360,340,380);
+	rectangulo_lleno(340,360,360,380);
+	rectangulo_lleno(360,360,380,380);
+
+	/*
+	* FILA 20
+	*/
+	
+	rectangulo_lleno(0,380,20,400);
+	rectangulo_lleno(20,380,40,400);
+	rectangulo_lleno(40,380,60,400);
+	rectangulo_lleno(60,380,80,400);
+	rectangulo_lleno(80,380,100,400);
+	rectangulo_lleno(100,380,120,400);
+	rectangulo_lleno(120,380,140,400);
+	rectangulo_lleno(140,380,160,400);
+	rectangulo_lleno(160,380,180,400);
+	rectangulo_lleno(180,380,200,400);
+	rectangulo_lleno(200,380,220,400);
+	rectangulo_lleno(220,380,240,400);
+	rectangulo_lleno(240,380,260,400);
+	rectangulo_lleno(260,380,280,400);
+	rectangulo_lleno(280,380,300,400);
+	rectangulo_lleno(300,380,320,400);
+	rectangulo_lleno(320,380,340,400);
+	rectangulo_lleno(340,380,360,400);
+	rectangulo_lleno(360,380,380,400);
+
+	/*------------------------------------------------------------------*/
+
+	/*
+	* LINEA DE COLUMNA 0
+	*/
+	color_rgb(13, 13, 13);
+	linea(-1,0,-1,400);
+	linea(0,0,0,400);
+	linea(1,0,1,400);
+
+	/*
+	* LINEA DE COLUMNA 1
+	*/
+	color_rgb(13, 13, 13);
+	linea(19,0,19,400);
+	linea(20,0,20,400);
+	linea(21,0,21,400);
+
+	/*
+	* LINEA DE COLUMNA 2
+	*/
+	color_rgb(13, 13, 13);
+	linea(39,0,39,400);
+	linea(40,0,40,400);
+	linea(41,0,41,400);
+
+	/*
+	* LINEA DE COLUMNA 3
+	*/
+	color_rgb(13, 13, 13);
+	linea(59,0,59,400);
+	linea(60,0,60,400);
+	linea(61,0,61,400);
+
+	/*
+	* LINEA DE COLUMNA 4
+	*/
+	color_rgb(13, 13, 13);
+	linea(79,0,79,400);
+	linea(80,0,80,400);
+	linea(81,0,81,400);
+
+	/*
+	* LINEA DE COLUMNA 5
+	*/
+	color_rgb(13, 13, 13);
+	linea(99,0,99,400);
+	linea(100,0,100,400);
+	linea(101,0,101,400);
+
+	/*
+	* LINEA DE COLUMNA 6
+	*/
+	color_rgb(13, 13, 13);
+	linea(119,0,119,400);
+	linea(120,0,120,400);
+	linea(121,0,121,400);
+
+	/*
+	* LINEA DE COLUMNA 7
+	*/
+	color_rgb(13, 13, 13);
+	linea(139,0,139,400);
+	linea(140,0,140,400);
+	linea(141,0,141,400);
+
+	/*
+	* LINEA DE COLUMNA 8
+	*/
+	color_rgb(13, 13, 13);
+	linea(159,0,159,400);
+	linea(160,0,160,400);
+	linea(161,0,161,400);
+
+	/*
+	* LINEA DE COLUMNA 9
+	*/
+	color_rgb(13, 13, 13);
+	linea(179,0,179,400);
+	linea(180,0,180,400);
+	linea(181,0,181,400);
+
+	/*
+	* LINEA DE COLUMNA 10
+	*/
+	color_rgb(13, 13, 13);
+	linea(199,0,199,400);
+	linea(200,0,200,400);
+	linea(201,0,201,400);
+
+	/*
+	* LINEA DE COLUMNA 11
+	*/
+	color_rgb(13, 13, 13);
+	linea(219,0,219,400);
+	linea(220,0,220,400);
+	linea(221,0,221,400);
+
+	/*
+	* LINEA DE COLUMNA 12
+	*/
+	color_rgb(13, 13, 13);
+	linea(239,0,239,400);
+	linea(240,0,240,400);
+	linea(241,0,241,400);
+
+	/*
+	* LINEA DE COLUMNA 13
+	*/
+	color_rgb(13, 13, 13);
+	linea(259,0,259,400);
+	linea(260,0,260,400);
+	linea(261,0,261,400);
+
+	/*
+	* LINEA DE COLUMNA 14
+	*/
+	color_rgb(13, 13, 13);
+	linea(279,0,279,400);
+	linea(280,0,280,400);
+	linea(281,0,281,400);
+
+	/*
+	* LINEA DE COLUMNA 15
+	*/
+	color_rgb(13, 13, 13);
+	linea(299,0,299,400);
+	linea(300,0,300,400);
+	linea(301,0,301,400);
+
+	/*
+	* LINEA DE COLUMNA 16
+	*/
+	color_rgb(13, 13, 13);
+	linea(319,0,319,400);
+	linea(320,0,320,400);
+	linea(321,0,321,400);
+
+	/*
+	* LINEA DE COLUMNA 17
+	*/
+	color_rgb(13, 13, 13);
+	linea(339,0,339,400);
+	linea(340,0,340,400);
+	linea(341,0,341,400);
+
+	/*
+	* LINEA DE COLUMNA 18
+	*/
+	color_rgb(13, 13, 13);
+	linea(359,0,359,400);
+	linea(360,0,360,400);
+	linea(361,0,361,400);
+
+	/*
+	* LINEA DE COLUMNA 19
+	*/
+	color_rgb(13, 13, 13);
+	linea(379,0,379,400);
+	linea(380,0,380,400);
+	linea(381,0,381,400);
+
+
+	/*
+	* LINEA DE FILA 0
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,-1,380,-1);
+	linea(0,0,380,0);
+	linea(0,1,380,1);
+
+	/*
+	* LINEA DE FILA 1
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,19,380,19);
+	linea(0,20,380,20);
+	linea(0,21,380,21);
+
+	/*
+	* LINEA DE FILA 2
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,39,380,39);
+	linea(0,40,380,40);
+	linea(0,41,380,41);
+
+	/*
+	* LINEA DE FILA 3
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,59,380,59);
+	linea(0,60,380,60);
+	linea(0,61,380,61);
+
+	/*
+	* LINEA DE FILA 4
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,79,380,79);
+	linea(0,80,380,80);
+	linea(0,81,380,81);
+
+	/*
+	* LINEA DE FILA 5
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,99,380,99);
+	linea(0,100,380,100);
+	linea(0,101,380,101);
+
+	/*
+	* LINEA DE FILA 6
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,119,380,119);
+	linea(0,120,380,120);
+	linea(0,121,380,121);
+
+	/*
+	* LINEA DE FILA 7
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,139,380,139);
+	linea(0,140,380,140);
+	linea(0,141,380,141);
+
+	/*
+	* LINEA DE FILA 8
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,159,380,159);
+	linea(0,160,380,160);
+	linea(0,161,380,161);
+
+	/*
+	* LINEA DE FILA 9
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,179,380,179);
+	linea(0,180,380,180);
+	linea(0,181,380,181);
+
+	/*
+	* LINEA DE FILA 10
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,199,380,199);
+	linea(0,200,380,200);
+	linea(0,201,380,201);
+
+	/*
+	* LINEA DE FILA 11
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,219,380,219);
+	linea(0,220,380,220);
+	linea(0,221,380,221);
+
+	/*
+	* LINEA DE FILA 12
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,239,380,239);
+	linea(0,240,380,240);
+	linea(0,241,380,241);
+
+	/*
+	* LINEA DE FILA 13
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,259,380,259);
+	linea(0,260,380,260);
+	linea(0,261,380,261);
+
+	/*
+	* LINEA DE FILA 14
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,279,380,279);
+	linea(0,280,380,280);
+	linea(0,281,380,281);
+
+	/*
+	* LINEA DE FILA 15
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,299,380,299);
+	linea(0,300,380,300);
+	linea(0,301,380,301);
+
+	/*
+	* LINEA DE FILA 16
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,319,380,319);
+	linea(0,320,380,320);
+	linea(0,321,380,321);
+
+	/*
+	* LINEA DE FILA 17
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,339,380,339);
+	linea(0,340,380,340);
+	linea(0,341,380,341);
+
+	/*
+	* LINEA DE FILA 18
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,359,380,359);
+	linea(0,360,380,360);
+	linea(0,361,380,361);
+
+	/*
+	* LINEA DE FILA 19
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,379,380,379);
+	linea(0,380,380,380);
+	linea(0,381,380,381);
+
+	/*
+	* LINEA DE FILA 20
+	*/
+	color_rgb(13, 13, 13);
+	linea(0,399,380,399);
+	linea(0,400,380,400);
+	linea(0,401,380,401);
+
+	refresca();
+	return 0;
+
+}
